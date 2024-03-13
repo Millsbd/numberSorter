@@ -1,0 +1,34 @@
+HTML:
+
+-Boilerplate with title and link to stylesheet.
+-Main section with a h1 for the sort title, then an input form. 
+-Input form has a series of selects for values which allow selection of a number from 1 - 9 on a dropdown. 
+-There is a container for the output, which will show the soreted numbers from the array. These consist of several spans to hold the values. 
+-closes with a script link to the JS form.
+
+CSS:
+-root file to hold the custom color variables used in the page. 
+-DONT REALLY UNDERSTAND BEFORE / AFTER WILL RESEARCH
+-Uses flex to center and display the items. 
+-fieldset draws a box around the form and allows you to style it. 
+-Uses a linear gradient to spice up the button background coloring. 
+
+
+JS:
+
+-Declares variables at beginning in this case just the button. 
+-Sort input array, uses an event listener so it has a prevent default to keep the page from refreshing. It uses spread combined with the map array method grab the form values and convert them to numbers. 
+-Uses the sort method with the a,b => return a - b to sort the values. 
+** The array.sort(a,b) => a - b; works to sort in ascending order becuase if a is smaller than be it is negative and is sorted to the left. If a is bigger than b it is positive and sorted to the right. If they are equal nothin happens. If you want DESCENDING just flip the logic and put b - a . It will compare every value in the array b/c sort is an array mehtod and loops through all values i.e map / forEach. 
+
+UpdateUI - grabs the values using th DOM and assigns inner text to display. 
+
+bubbleSort - sorts using nested for loops. The first i loop runs through each value in the array. The nested j loop runs through all but the last. It checks if the current looping value is greater than the next value. And then pushes it  backwards if it is greater. 
+
+selectionSort - sorts using a nested for loop. first loops through and assings a minIndex. The inner loop checks if the current looping value is less than the value at variable minIndex. if it is it assigns the current value to be minindex and thus be sorted first. 
+
+insertionSort - starts at the second numver in the array and runs a for loop. It assigns the value at the current loop position to currValue variable. It then creates another variable j which is that index - 1. It uses a while loop to run while j is greater than 0 and the array value at j is greater than the assigned current value. It then swaps the values if both are true and loops backwards updating currValue along the way. 
+
+There is an event listener attached to the button to run the logic. 
+
+
